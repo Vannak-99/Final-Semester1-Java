@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class NumberInputDisplay {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+       
+        System.out.print("Enter the number of elements to input : ");
+        int numberOfElements = scanner.nextInt();
+       
+        int[] numbers = new int[numberOfElements];
+       
+        System.out.println("Enter " + numberOfElements + " numbers:");
+        for(int i = 0; i < numberOfElements; i++) {
+            numbers[i] = scanner.nextInt(); // Store each input number in the array
+        }
+       
+        System.out.println("entered the following numbers : ");
+        for(int number : numbers) {
+            System.out.println(number);
+        }
+        
+        scanner.close();
+    }
+}
